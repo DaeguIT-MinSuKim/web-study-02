@@ -52,6 +52,7 @@ public class ParamServlet extends HttpServlet {
         request.setAttribute("items", arrToItems);
         request.setAttribute("job", job);
         request.setAttribute("interests", arrToInterests);
+        request.setAttribute("itemsArr", items);
         
         RequestDispatcher dispatcher = request.getRequestDispatcher("04_result.jsp"); 
         dispatcher.forward(request, response);

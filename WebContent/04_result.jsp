@@ -14,8 +14,14 @@
        기타 : ${content }<br>
        악세사리 : ${items }<br>
 	직업 : ${job }<br>
-       관심 분야 : ${interests }
-        
+       관심 분야 : ${interests }<br>
+       악세사리 배열로 표현<br>
+<%
+	String[] itemArr = (String[])request.getAttribute("itemsArr");
+	for(String item : itemArr){
+	    out.print(item + "<br>");
+	}
+%>       
 	<br><a href='javascript:history.go(-1)'>다시</a>;
 </body>
 </html>
